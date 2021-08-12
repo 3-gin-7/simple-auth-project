@@ -12,7 +12,7 @@ const mongo_options = {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }
-console.log(url)
+
 mongoose.connect(url, mongo_options).then(
     ()=>{
         console.log('connected to db')
@@ -34,9 +34,9 @@ app.get('/', (req,res) =>{
     res.sendFile(path.join(__dirname, '/public/pages/homepage.html'))
 })
 
-//LOGIN
-app.get('/login', (req,res) =>{
-    res.sendFile(path.join(__dirname, '/public/pages/login.html'))
+//AUTHENTICATED
+app.get('/authenticated', (req,res) =>{
+    res.sendFile(path.join(__dirname, '/public/pages/authenticated.html'))
 })
 
 //REGISTER

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticated</title>
+    <link rel="stylesheet" href="../accets/css/styles.css">
+    <link rel="stylesheet" href="../accets/css/styles_auth.css">
+    <script src="../accets/js/index.js">
+        if(!window.localStorage.getItem('token')) window.location.href="http://localhost:8000/"
+    </script>
+</head>
+<body>
+    <main>
+        <h1>This is authenticated page</h1>
+        <button onclick="logout()">Logout</button>
+    </main>
+</body>
+</html>

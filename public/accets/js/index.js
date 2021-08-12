@@ -32,7 +32,12 @@ const submitRegisterUser = () =>{
         body
     })
     .then((result) => {
-        result.json().then(res => console.log(res))
+        result.json().then((res) =>{
+            console.log(res)
+            if(res.success){
+                window.location.href = "http://localhost:8000/"
+            }
+        })
     }).catch((err) => {
         console.log(err)
     });
@@ -64,7 +69,13 @@ const submitLoginForm = () =>{
         body
     }).then((result) => {
         result.json().then((res) =>{
-            console.log(res)
+            if(res.error) console.log('user not found')
+            if(res.success){
+                window.localStorage.setItem('token', 'token')
+                console.log('set token ')
+                console.log(window.localStorage.getItem('token'))
+                window.location.href = "http://localhost:8000/authenticated"
+            }
         })
     }).catch((err) => {
         console.log(err)
@@ -73,6 +84,11 @@ const submitLoginForm = () =>{
 
 const navigateToRegister = () =>{
     window.location.href = "http://localhost:8000/register"
+}
+
+const logout = () =>{
+    window.localStorage.removeItem('token')
+    window.location.href='http://localhost:8000/'
 }
 
 

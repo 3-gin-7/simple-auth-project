@@ -11,7 +11,7 @@ router.post('/register', async (req, res) =>{
     const user = new User(userInfo)
     user.save((err, doc) =>{
         if(err) res.status(500).json(err)
-        if(doc) res.json(doc)
+        if(doc) res.json({success:'user registered'})
     })
 })
 
@@ -21,7 +21,6 @@ router.post('/login', (req, res) =>{
     User.find({username:userInfo.username,password:userInfo.password}, (err, doc) =>{
         if(err) res.status(500).json({error:err})
         if(doc){
-            res.json({success:doc})
             if(doc.length === 0) res.status(401).json({error:'user not found'})
             if(doc.length > 0) res.json({success:'successful authentication'})
         }
