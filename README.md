@@ -2,7 +2,7 @@
 
 ## Core Technology
 
-*Nodejs
-*Express
-*Mongo
-*Html, css, js
+* Nodejs
+* Express
+* Mongo
+* Html, css, js
