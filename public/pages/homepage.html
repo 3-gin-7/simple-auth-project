@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../accets/css/styles.css">
+    <link rel="stylesheet" href="../accets/css/styles_home.css">
+    <script src="../accets/js/index.js"></script>
+</head>
+<body>
+    <main>
+        <section class="login-section">
+            <div class="login-container">
+                <h1>Login</h1>
+                <form>
+                    <label for="username">Username</label>
+                    <input class="inpt" name="username" type="text" placeholder="Username">
+                    <label for="password">Password</label>
+                    <input class="inpt" name="password" type="password" placeholder="Password">
+                    <button onclick="submitLoginForm()" class="btn" type="button">Submit</button>
+                </form>
+            </div>
+        </section>
+        <section class="register-section">
+            <div class="register-container">
+                <h1>Register</h1>
+                <p>Don't have an account? Register one!</p>
+                <button onclick="navigateToRegister()" class="btn">Register an Account</button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
