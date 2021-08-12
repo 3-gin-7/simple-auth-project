@@ -1,8 +1,8 @@
-##Simple Authentication application
+# Simple Authentication application
 
-#Core Technology
+## Core Technology
 
-*Nodejs
-*Express
-*Mongo
-*Html, css, js
+* Nodejs
+* Express
+* Mongo
+* Html, css, js
